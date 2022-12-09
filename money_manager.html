@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="money.css" />
+    <script type="module" src="configuration.js"></script>
+    <script type="module" src="money_script.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.css" />
+</head>
+
+<body>
+    <div class="container">
+        <nav id="navHide" class="navbar navbar-default initHidden">
+            <div class="navbar-header">
+                <a id="userName" class="navbar-brand" href="#"></a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li id="allTransactions" class="active"><a href="#">Transactons</a></li>
+                <li id="addTransactions"><a href="#">Add</a></li>
+                <li><a href="#">Stats</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li id="logoutBtn"><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout &nbsp;</a></li>
+            </ul>
+        </nav>
+        <!-- This is a login div -->
+        <div id="loginHide" class="row" style="margin-top:25%;">
+            <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4">
+                <h1 align="center" style="margin-bottom: 20%;">Welcome to money management </h1>
+                <!-- <input id="email" class="form-control" placeholder="email"  />
+                <input id="password" class="form-control" placeholder="password" /> -->
+                <!-- <input id="loginBtn" value="submit" class="btn btn-success btn-block" /> -->
+                <input id="loginBtnWithGoogle" value="Log in with google" class="btn btn-success btn-block" />
+
+            </div>
+            <!-- This is a login div -->
+
+        </div>
+
+        <!-- This is data div -->
+        <div id="dataHide" class="initHidden">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <h2 align="center" id="welcomeText">List of all transactions
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-md-12 col-sm-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+
+                                <th>Amount</th>
+                                <th>Type</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pushDataHere">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-4 col-md-4 col-sm-4">
+                    <!-- <div id="myChart" style="width:100%; max-width:600;">
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+
+        <!-- THIS IS INSERT DATA DIV-->
+        <div id="insertHide" class="row initHidden">
+            <h1 align="center">Insert new transaction</h1>
+            <div class="col-lg-4 col-lg-offset-4">
+                <div class="form-group">
+                    <label for="amountInsert">Amount:</label>
+                    <input type="number" class="form-control" id="amountInsert">
+                </div>
+                <div class="form-group">
+                    <label for="typeInsert">Select type: </label>
+                    <select class="form-control" id="typeInsert">
+                        <option>Food</option>
+                        <option>Gas</option>
+                        <option>Clothing</option>
+                        <option>Gifts</option>
+                    </select>
+                </div>
+                <button id="addDataBtn" type="button" class="btn btn-success btn-block">Add</button>
+            </div>
+        </div>
+    </div>
+    <!-- This is data div -->
+
+
+
+
+
+    </div>
+</body>
+
+
+
+
+</html>
